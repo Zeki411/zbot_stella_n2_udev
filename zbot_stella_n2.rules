@@ -1,3 +1,7 @@
+# set the udev rule , make the rplidar's device_port be fixed by YDLIDAR
+#
+KERNEL=="ttyUSB*", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", ATTRS{serial}=="0001", MODE:="0777", SYMLINK+="YDLIDAR"
+
 # set the udev rule , make the MotorDriver's device_port be fixed by MW
 #
 KERNEL=="ttyUSB*", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", MODE:="0777", SYMLINK+="MW"
